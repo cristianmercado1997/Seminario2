@@ -1,45 +1,32 @@
 
 package seminario2;
-
-
 public class Jefe extends Empleado {
-    
-    private float bonificacion;
+    private float incentivo;
 
-  
-    
    public Jefe (String nombre, float salario, int anyoAlta, float bonificacion)
    {
        super(nombre,salario,anyoAlta);
-       this.bonificacion= bonificacion;   
-     
+       this.incentivo= bonificacion;        
     }
-    
 
-    public void setBonificacion(float bonificacion){
-       this.bonificacion= bonificacion; 
+    public void setIncentivo(float incentivo){
+       this.incentivo= incentivo; 
         
     }
     
-
 public String getDescripcion (){
     
     
-    return "soy"+getNombre() +" y gano "+ getSalario();
+    return "Soy"+getNombre() +" y gano "+ getSalario();
 }
-    
-    
     
     public float getSalario(){
         
-       return  super.getSalario()+ super.getSalario()* bonificacion;
+       return  super.getSalario()+ super.getSalario()* incentivo;
     }
-    
-    
-    
-      public float getBonificacion() {
-        return bonificacion;
-    }
-    
+
+      public float getIncentivo() {
+        return incentivo;
+    }    
     
 }
